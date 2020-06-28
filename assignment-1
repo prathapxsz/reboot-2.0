@@ -1,27 +1,28 @@
 
 #Problem 1     Block System call : 
 
-#    block system call for date command 
-#    that means you don't have to uninstall date command but if you run kernel must not accept 
-#    do the same Firefox as well
+	#block system call for date command 
+	#that means you don't have to uninstall date command but if you run kernel must not accept 
+	#do the same Firefox as well
+Answer :-
+	#First know the path to date command
+	$ which date
+	#Remove execution permissions to date command
+	#We can put read permissions for all users and remove all other permissions using 4
+	$ chmod 444 /usr/bin/date
 
-#First know the path to date command
-$ which date
-#Remove execution permissions to date command
-#We can put read permissions for all users and remove all other permissions using 4
-$ chmod 444 /usr/bin/date
-
-#For firefox
-$ which date
-$ chmod 444 /usr/bin/firefox 
+	#For firefox
+	$ which date
+	$ chmod 444 /usr/bin/firefox 
 
 #Problem 2 :  play with directory 
 
-#      create a directory without name from command line
-$ mkdir " "
+Answer :-
+	#create a directory without name from command line
+	$ mkdir " "
 
-#      create a directory with name "-okgoogle"
+	#create a directory with name "-okgoogle"
 
-$ mkdir -- -okgoogle
-# -- will be used to tell bash everything coming next should be interpreted as text or string
-# We need to use (--) because if we use -okgoole alone, It interprets everything after -  as an option
+	$ mkdir -- -okgoogle
+	# -- will be used to tell bash everything coming next should be interpreted as text or string
+	# We need to use (--) because if we use -okgoole alone, It interprets everything after -  as an option
