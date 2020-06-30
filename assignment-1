@@ -26,3 +26,38 @@ Answer :-
 	$ mkdir -- -okgoogle
 	# -- will be used to tell bash everything coming next should be interpreted as text or string
 	# We need to use (--) because if we use -okgoole alone, It interprets everything after -  as an option
+	
+
+#Problem 3 :  create a directory structure 
+#Note :   You are only allowed to use a single command and only one time
+
+Answer :- 
+	
+	$ mkdir -p A/{B/{G/K/Reboot.txt,H/J/Reboot.txt},C/{I/J/Reboot.txt,J/L/Reboot.txt},D/{F/L/Reboot.txt,E/M/reboot.txt}}
+
+
+#Problem 4.  share and files and folder 
+
+Answer :-
+
+	$ adduser jack
+	$ adduser jill
+	$ sudo passwd jack
+	$ sudo passwd jill
+	#Login into jack and change permissions for jack folder under home to 777 and do same to jill as well
+	$ chmod 777 /home/jack
+	$ mkdir jack1 jack2
+	$ mkdir jack.txt
+	$ chmod 666 jack.txt
+	$ chmod 777 jack1 jack2
+	#Login with jill
+	$ mkdir jill1 jill2
+	$ mkdir jill.txt
+	$ chmod 777 /home/jill
+	$ chmod 666 jill.txt
+	$ chmod 777 jill1 jill2
+	#Now we can swap from either jack or jill accounts 	
+	$ mv jill1 jill2 jill.txt  /home/jack/
+	$ cd /home/jack
+	$ mv jack1 jack2 jack.txt /home/jill
+
