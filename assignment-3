@@ -1,0 +1,15 @@
+#Problem 5 :  play with files and directories 
+
+     # create  3 files named   abc.txt  ok  fine  g.txt  /tmp directory 
+     # create  4  directories   aa aaa aaaa  under  /tmp directory 
+     # give ls command to  list the content of  /tmp directory 
+     # make sure it will only list the content (file|directory)  having 2 char in their name.
+
+Answer :- 
+	$ cd /tmp
+	#'\' character is used to tell kernel to interpet next character as a string
+	$ touch abc.txt ok\ fine g.txt
+	$ mkdir aa aaa aaaa
+	#To list based on number of characters in a directory we can  use ? sign along with -d as shown below
+	$ ls -d /tmp/??
+
