@@ -12,4 +12,3 @@ Answer :-
 	$ mkdir aa aaa aaaa
 	#To list based on number of characters in a directory we can  use ? sign along with -d as shown below
 	$ ls -d /tmp/??
-
